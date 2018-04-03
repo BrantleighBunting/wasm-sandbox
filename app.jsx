@@ -3,7 +3,6 @@ global._babelPolyfill = false; /* Can only have one instance of babel-polyfill *
 import 'babel-polyfill'
 import React, { Component } from 'react'
 import ReactDOM, { render } from 'react-dom'
-// import autobind from 'autobind-decorator'
 
 import { compose, withStateHandlers } from 'recompose'
 
