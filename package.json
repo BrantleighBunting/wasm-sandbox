@@ -1,0 +1,29 @@
+{
+  "name": "rust-sandbox",
+  "version": "1.0.0",
+  "author": "Brantleigh Bunting",
+  "license": "",
+  "scripts": {
+    "build": "webpack --progress --colors --hot",
+    "serve": "yarn assemble && yarn bindgen && yarn build && webpack-dev-server dist/index.js",
+    "bindgen": "wasm-bindgen target/wasm32-unknown-unknown/release/rust_sandbox.wasm --out-dir .",
+    "assemble": "cargo +nightly build --release --target wasm32-unknown-unknown"
+  },
+  "devDependencies": {
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0"
+  },
+  "dependencies": {
+    "autobind-decorator": "^2.1.0",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "nodemon": "^1.17.3",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "recompose": "^0.26.0"
+  }
+}
