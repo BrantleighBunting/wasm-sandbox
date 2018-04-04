@@ -12,8 +12,17 @@ yarn serve
 yarn build
 
 ```
+# Calling Rust methods, using Rust Structs as Classes in JS:
+```html
+<div>
+  <p>Rust String: {this.state.wasm.hello_world()}</p>
+  <p>Rust Struct: ContainsData {"{"} {
+	  this.state.wasm.ContainsData.new().add(10)
+  } {"}"}</p>
+</div>
 
-
+```
+# Importing the wasm into JS:
 ```javascript
 
 // To import the sandbox .wasm file, we need to do this:
